@@ -8,8 +8,8 @@ plugins {
 ext {
     mGroupId = 'com.github.orcunozyurt'
     mArtifactId = 'SimpleAnalyticsHostApp'
-    mVersionCode = 12
-    mVersionName = '0.5.8'
+    mVersionCode = 13
+    mVersionName = '0.5.9'
 
     mLibraryName = 'SimpleAnalyticsLibrary'
     mLibraryDescription = 'Simple Library for collecting ui analytics!'
@@ -29,6 +29,12 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    publishing {
+        singleVariant('release') {
+            withSourcesJar()
         }
     }
 
@@ -58,32 +64,15 @@ task androidSourcesJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                groupId mGroupId
-                artifactId mArtifactId
-                version mVersionName
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId mGroupId
+            artifactId mArtifactId
+            version mVersionName
 
+            afterEvaluate {
                 from components.release
-
-                artifact androidSourcesJar
-
-                pom {
-                    name = mLibraryName
-                    description = mLibraryDescription
-                }
-            }
-        }
-        repositories {
-            maven {
-                name = "GitHubPackages"
-                url = uri("https://maven.pkg.github.com/orcunozyurt/SimpleAnalyticsHostApp")
-                credentials {
-                    username = System.getenv("GITHUB_ACTOR")
-                    password = System.getenv("GITHUB_TOKEN")
-                }
             }
         }
     }
