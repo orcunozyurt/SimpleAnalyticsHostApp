@@ -18,6 +18,8 @@ Simple android analytics library for recording ui interactions.
   	}
    ```
 
+Alternatively, if you would like to have the AAR file directly, Check **Releases**. Github workflow is triggered at every tag push and builds the library, creates the release and uploads the artifacts to it.
+
 ## Example Usage
 
 1. In the app initialize the SDK:
