@@ -17,11 +17,10 @@ ext {
 
 android {
     namespace = 'com.example.analyticssdk'
-    compileSdkVersion 33
+    compileSdk 33
 
     defaultConfig {
         minSdkVersion 24
-
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         consumerProguardFiles 'consumer-rules.pro'
     }
