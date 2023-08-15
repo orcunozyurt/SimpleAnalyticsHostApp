@@ -8,8 +8,8 @@ plugins {
 ext {
     mGroupId = 'com.orcun.analyticssdk'
     mArtifactId = 'simple-analytics-library'
-    mVersionCode = 4
-    mVersionName = '0.4.0'
+    mVersionCode = 5
+    mVersionName = '0.5.0'
 
     mLibraryName = 'SimpleAnalyticsLibrary'
     mLibraryDescription = 'Simple Library for collecting ui analytics!'
@@ -81,8 +81,8 @@ afterEvaluate {
                 name = "GitHubPackages"
                 url = uri("https://maven.pkg.github.com/orcunozyurt/SimpleAnalyticsHostApp")
                 credentials {
-                    username = System.getenv("GPR_USER")
-                    password = System.getenv("GPR_KEY")
+                    username = System.getenv("GITHUB_ACTOR")
+                    password = System.getenv("GITHUB_TOKEN")
                 }
             }
         }

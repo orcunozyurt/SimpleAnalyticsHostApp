@@ -9,6 +9,9 @@ jobs:
   publish:
     name: Release Simple Library
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
 
     steps:
       - uses: actions/checkout@v3
@@ -35,8 +38,8 @@ jobs:
       - name: Publish to GitHub Package Registry 🚀
         run: bash ./gradlew :analyticsSDK:publish
         env:
-          GPR_USER: ${{ github.actor }}
-          GPR_KEY: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_ACTOR: ${{ github.actor }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create Release ✅
         id: create_release
