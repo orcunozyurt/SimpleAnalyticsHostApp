@@ -1,6 +1,23 @@
 # SimpleAnalyticsHostApp
 Simple android analytics library for recording ui interactions.
 
+## Installation
+1. Add the JitPack repository to your build file
+   ```
+    allprojects {
+  		repositories {
+  			...
+  			maven { url 'https://jitpack.io' }
+  		}
+  	}
+   ```
+2. Add the dependency
+   ```
+    dependencies {
+          implementation 'com.github.orcunozyurt:SimpleAnalyticsHostApp:0.5.10'
+  	}
+   ```
+
 ## Example Usage
 
 1. In the app initialize the SDK:
