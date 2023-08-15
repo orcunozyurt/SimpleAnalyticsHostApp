@@ -8,8 +8,8 @@ plugins {
 ext {
     mGroupId = 'com.orcun.analyticssdk'
     mArtifactId = 'simple-analytics-library'
-    mVersionCode = 5
-    mVersionName = '0.5.0'
+    mVersionCode = 6
+    mVersionName = '0.5.2'
 
     mLibraryName = 'SimpleAnalyticsLibrary'
     mLibraryDescription = 'Simple Library for collecting ui analytics!'
