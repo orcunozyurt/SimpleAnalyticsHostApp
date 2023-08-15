@@ -40,4 +40,4 @@ jobs:
         uses: actions/upload-artifact@v2.2.0
         with:
           name: Release artifact
-          path: analyticSDK/build/outputs/aar/analyticsSDK-release.aar
+          path: analyticsSDK/build/outputs/aar/analyticsSDK-release.aar
