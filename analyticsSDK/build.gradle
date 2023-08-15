@@ -8,8 +8,8 @@ plugins {
 ext {
     mGroupId = 'com.github.orcunozyurt'
     mArtifactId = 'SimpleAnalyticsHostApp'
-    mVersionCode = 13
-    mVersionName = '0.5.9'
+    mVersionCode = 14
+    mVersionName = '0.5.10'
 
     mLibraryName = 'SimpleAnalyticsLibrary'
     mLibraryDescription = 'Simple Library for collecting ui analytics!'
