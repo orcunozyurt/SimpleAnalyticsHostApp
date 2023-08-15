@@ -82,7 +82,7 @@ afterEvaluate {
                 url = uri("https://maven.pkg.github.com/orcunozyurt/SimpleAnalyticsHostApp")
                 credentials {
                     username = System.getenv("GPR_USER")
-                    password = System.getenv("GPR_TOKEN")
+                    password = System.getenv("GPR_KEY")
                 }
             }
         }
