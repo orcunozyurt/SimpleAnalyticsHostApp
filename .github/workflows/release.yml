@@ -33,12 +33,6 @@ jobs:
       - name: Build AAR ⚙️🛠
         run: bash ./gradlew :analyticsSDK:assemble
 
-      - name: Publish to GitHub Package Registry 🚀
-        run: bash ./gradlew :analyticsSDK:publish
-        env:
-          GITHUB_ACTOR: ${{ github.actor }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Create Release ✅
         id: create_release
         uses: actions/create-release@v1
